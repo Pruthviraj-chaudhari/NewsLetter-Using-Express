@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/", "dest": "app.js" },
+      { "src": "/(.*)", "dest": "app.js" }
+    ],
+    "env": {
+      "MAILCHIMP_API_KEY": "4b4f3d6dd0d7aed9f9f2e8b4c929e7ed-us12",
+      "MAILCHIMP_LIST_ID": "bf444f19bf"
+    }
+  }
+  
