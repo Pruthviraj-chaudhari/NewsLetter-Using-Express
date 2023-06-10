@@ -50,7 +50,6 @@ app.post("/", (req, res) => {
   apiRequest.write(jsonData);
   apiRequest.end();
 
-  // res.sendFile(__dirname + "/success.html");
 });
 
 app.post("/failure", (req, res)=>{
