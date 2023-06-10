@@ -6,10 +6,6 @@
     "routes": [
       { "src": "/", "dest": "app.js" },
       { "src": "/(.*)", "dest": "app.js" }
-    ],
-    "env": {
-      "MAILCHIMP_API_KEY": "4ec800596c246346f63b2b40643c439b-us12",
-      "MAILCHIMP_LIST_ID": "bf444f19bf"
-    }
-  }
+    ]
+}
   
