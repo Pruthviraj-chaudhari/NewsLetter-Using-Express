@@ -28,10 +28,10 @@ app.post("/", (req, res) => {
 
   const jsonData = JSON.stringify(data);
 
-  const url = "https://us12.api.mailchimp.com/3.0/lists/bf444f19bf";
+  const url = `https://us12.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}`;
   const options = {
     method: "POST",
-    auth: "pruthvi:4b4f3d6dd0d7aed9f9f2e8b4c929e7ed-us12",
+    auth: `pruthvi:${process.env.MAILCHIMP_API_KEY}`,
   };
 
   const apiRequest = https.request(url, options, (response) => {
@@ -58,9 +58,6 @@ app.post("/success", (req, res) => {
   res.redirect("/");
 });
 
-
-app.listen(3000, ()=>{
+app.listen(3000, () => {
   console.log("Server Listening on Port 3000");
-})
-
-// 4b4f3d6dd0d7aed9f9f2e8b4c929e7ed-us12
+});
